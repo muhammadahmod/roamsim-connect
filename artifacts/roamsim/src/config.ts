@@ -3,7 +3,7 @@
 // Update the WhatsApp number and contact email here.
 // ============================================================
 
-export const WHATSAPP_NUMBER = "27000000000"; // Replace with real number (country code, no +)
+export const WHATSAPP_NUMBER = "15044748913"; // Twilio number (international format, no +)
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 export const CONTACT_EMAIL = "muhammadahmod06@gmail.com";
 export const SUPPORT_HOURS = "Mon–Fri, 8am–8pm SAST · Sat–Sun, 9am–5pm SAST";
