@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "RoamSIM"
+version = "1.0.0"
+id = "artifacts/roamsim"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20052
+
+[services.development]
+run = "pnpm --filter @workspace/roamsim run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/roamsim", "run", "build" ]
+publicDir = "artifacts/roamsim/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20052"
+BASE_PATH = "/"
