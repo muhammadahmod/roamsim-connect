@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { Trust } from "@/components/Trust";
 import { ShieldCheck, Zap, Globe, MessageCircle, CreditCard, QrCode, CheckCircle2, PhoneOff, Clock } from "lucide-react";
 import { PLANS, FAQ_ITEMS, WHATSAPP_LINK, CONTACT_EMAIL, SUPPORT_HOURS } from "@/config";
 import {
@@ -32,13 +33,13 @@ export default function Home() {
     <div className="min-h-screen flex flex-col font-sans">
       <Nav />
       <main className="flex-1">
-        
+
         {/* HERO SECTION */}
         <section id="hero" className="relative overflow-hidden bg-background pt-16 md:pt-24 pb-20 md:pb-32 lg:pb-40">
           <div className="absolute inset-0 bg-primary/5 [mask-image:linear-gradient(to_bottom,white,transparent)]" />
           <div className="container mx-auto px-4 md:px-6 relative">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-              <motion.div 
+              <motion.div
                 className="flex flex-col justify-center space-y-8"
                 initial="hidden"
                 animate="visible"
@@ -53,12 +54,16 @@ export default function Home() {
                     RoamSIM delivers affordable eSIM data plans for South Africans travelling worldwide. Get connected before you land — no physical SIM required.
                   </p>
                 </div>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4">
                   <WhatsAppButton size="lg" className="w-full sm:w-auto" text="Get your eSIM on WhatsApp" />
                 </div>
-                
+
                 <div className="pt-4 border-t border-border/50">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-amber-400 text-base leading-none">★★★★★</span>
+                    <span className="text-sm text-muted-foreground">Loved by South African travellers</span>
+                  </div>
                   <p className="text-sm font-medium text-foreground mb-4">Trusted by South Africans travelling to 100+ countries</p>
                   <div className="flex flex-wrap gap-4 md:gap-6">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -76,8 +81,8 @@ export default function Home() {
                   </div>
                 </div>
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="relative hidden lg:flex items-center justify-center"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -122,8 +127,8 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">How it works</h2>
               <p className="text-lg text-muted-foreground">Get connected in minutes, entirely through WhatsApp.</p>
             </div>
-            
-            <motion.div 
+
+            <motion.div
               className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative"
               variants={staggerContainer}
               initial="hidden"
@@ -132,7 +137,7 @@ export default function Home() {
             >
               {/* Connecting line for desktop */}
               <div className="hidden lg:block absolute top-8 left-[12%] right-[12%] h-[2px] bg-border z-0" />
-              
+
               <motion.div variants={fadeIn} className="relative z-10 flex flex-col items-center text-center">
                 <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold mb-6 shadow-md border-4 border-background">
                   1
@@ -143,7 +148,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-2">Message us</h3>
                 <p className="text-muted-foreground text-sm">Send us a message on WhatsApp to start your order.</p>
               </motion.div>
-              
+
               <motion.div variants={fadeIn} className="relative z-10 flex flex-col items-center text-center">
                 <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold mb-6 shadow-md border-4 border-background">
                   2
@@ -154,7 +159,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-2">Pick your plan</h3>
                 <p className="text-muted-foreground text-sm">Tell us your destination and we'll recommend the best data package.</p>
               </motion.div>
-              
+
               <motion.div variants={fadeIn} className="relative z-10 flex flex-col items-center text-center">
                 <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold mb-6 shadow-md border-4 border-background">
                   3
@@ -165,7 +170,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-2">Pay securely</h3>
                 <p className="text-muted-foreground text-sm">Complete your payment securely via card through our Paystack link.</p>
               </motion.div>
-              
+
               <motion.div variants={fadeIn} className="relative z-10 flex flex-col items-center text-center">
                 <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold mb-6 shadow-md border-4 border-background">
                   4
@@ -190,7 +195,7 @@ export default function Home() {
               </div>
               <WhatsAppButton text="Ask about other countries" variant="outline" />
             </div>
-            
+
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
               {PLANS.map((planGroup, idx) => (
                 <Card key={idx} className="overflow-hidden border-border/60 hover:shadow-md transition-shadow group">
@@ -217,10 +222,10 @@ export default function Home() {
                         </div>
                       ))}
                       <div className="pt-4">
-                        <WhatsAppButton 
-                          className="w-full" 
-                          text={`Get ${planGroup.destination} Plan`} 
-                          href={`${WHATSAPP_LINK}?text=Hi, I'm interested in an eSIM for ${planGroup.destination}.`} 
+                        <WhatsAppButton
+                          className="w-full"
+                          text={`Get ${planGroup.destination} Plan`}
+                          href={`${WHATSAPP_LINK}?text=Hi, I'm interested in an eSIM for ${planGroup.destination}.`}
                         />
                       </div>
                     </div>
@@ -228,7 +233,7 @@ export default function Home() {
                 </Card>
               ))}
             </div>
-            
+
             <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900 rounded-lg p-4 text-sm text-amber-800 dark:text-amber-200 flex gap-3">
               <span className="text-lg">⚠️</span>
               <p><strong>Indicative pricing only</strong> — Because we source from global networks, exchange rates may cause slight fluctuations. Your exact price is confirmed on WhatsApp before any payment is requested.</p>
@@ -243,7 +248,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-white">Why travellers choose RoamSIM</h2>
               <p className="text-lg text-primary-foreground/80">A smarter way to stay connected abroad without the shock of roaming charges.</p>
             </div>
-            
+
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-primary-foreground/10 border border-primary-foreground/20 rounded-xl p-6 backdrop-blur-sm">
                 <PhoneOff className="h-8 w-8 mb-4 text-green-300" />
@@ -279,6 +284,9 @@ export default function Home() {
           </div>
         </section>
 
+        {/* SOCIAL PROOF / TRUST */}
+        <Trust />
+
         {/* DEVICE COMPATIBILITY */}
         <section id="compatibility" className="py-20 bg-muted/50 border-y border-border/50">
           <div className="container mx-auto px-4 md:px-6">
@@ -309,7 +317,7 @@ export default function Home() {
             <div className="text-center max-w-[800px] mx-auto mb-12">
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Frequently Asked Questions</h2>
             </div>
-            
+
             <div className="max-w-3xl mx-auto">
               <Accordion type="single" collapsible className="w-full">
                 {FAQ_ITEMS.map((faq, index) => (
@@ -336,10 +344,10 @@ export default function Home() {
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
                 No forms, no apps to download, no accounts to create. Just tap the button below to start a WhatsApp chat with our team.
               </p>
-              
+
               <div className="flex flex-col items-center gap-6">
                 <WhatsAppButton size="lg" className="w-full sm:w-auto h-14 text-lg px-10 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1" />
-                
+
                 <div className="space-y-2 text-sm text-muted-foreground">
                   <p><strong>Support Hours:</strong> {SUPPORT_HOURS}</p>
                   <p><strong>Email:</strong> <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-primary underline underline-offset-4">{CONTACT_EMAIL}</a></p>
