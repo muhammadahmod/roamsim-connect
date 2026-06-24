@@ -14,7 +14,7 @@ export const PLANS = [
   { destination: "United Arab Emirates", emoji: "🇦🇪", tagline: "Perfect for Dubai trips", plans: [
     { name: "UAE Starter", data: "5GB", validity: "7 days", price: "R229" },
     { name: "UAE Explorer", data: "15GB", validity: "30 days", price: "R499" },
-    { name: "UAE Plus", data: "30GB", validity: "30 days", price: "R799" },
+    { name: "UAE Plus", data: "20GB", validity: "30 days", price: "R799" },
   ]},
   { destination: "United Kingdom", emoji: "🇬🇧", tagline: "Stay connected in the UK", plans: [
     { name: "UK Starter", data: "5GB", validity: "7 days", price: "R249" },
@@ -39,7 +39,7 @@ export const PLANS = [
   { destination: "Saudi Arabia", emoji: "🇸🇦", tagline: "Ideal for Umrah & Hajj travellers", plans: [
     { name: "KSA Starter", data: "5GB", validity: "14 days", price: "R259" },
     { name: "KSA Explorer", data: "15GB", validity: "30 days", price: "R549" },
-    { name: "KSA Plus", data: "30GB", validity: "30 days", price: "R849" },
+    { name: "KSA Plus", data: "20GB", validity: "30 days", price: "R849" },
   ]},
 ];
 
