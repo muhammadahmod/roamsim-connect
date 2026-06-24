@@ -88,17 +88,29 @@ export default function Home() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                {/* Abstract geometric illustration instead of placeholder image */}
-                <div className="relative w-full max-w-[500px] aspect-square">
-                  <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl opacity-50" />
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-primary/20 rounded-full border border-primary/30 flex items-center justify-center">
-                    <div className="w-2/3 h-2/3 bg-primary/30 rounded-full border border-primary/40 flex items-center justify-center relative overflow-hidden">
-                      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
-                      <Globe className="h-1/3 w-1/3 text-primary opacity-80" />
+                {/* Phone + QR mockup */}
+                <div className="relative w-full max-w-[340px] mx-auto">
+                  <div className="absolute -inset-6 bg-primary/15 rounded-[3rem] blur-3xl opacity-70" />
+                  <div className="relative aspect-[9/19] rounded-[2.75rem] border-[10px] border-foreground bg-foreground shadow-2xl">
+                    <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-5 bg-foreground rounded-full z-20" />
+                    <div className="absolute inset-0 m-[2px] rounded-[2.25rem] overflow-hidden bg-gradient-to-b from-primary/10 via-background to-background">
+                      <div className="h-full w-full flex flex-col items-center justify-center gap-5 p-6 text-center">
+                        <div className="text-primary font-bold text-lg tracking-tight">RoamSIM</div>
+                        <div className="rounded-2xl bg-white p-4 shadow-lg border border-border">
+                          <QrCode className="h-28 w-28 text-foreground" strokeWidth={1.5} />
+                        </div>
+                        <div>
+                          <p className="font-semibold text-foreground">Your eSIM is ready</p>
+                          <p className="text-xs text-muted-foreground mt-1">UK · 15 GB · 30 days</p>
+                        </div>
+                        <div className="inline-flex items-center gap-1.5 rounded-full bg-green-100 text-green-700 px-3 py-1 text-xs font-medium">
+                          <CheckCircle2 className="h-3.5 w-3.5" /> Connected
+                        </div>
+                      </div>
                     </div>
                   </div>
                   {/* Floating elements */}
-                  <Card className="absolute top-[15%] right-[10%] p-3 shadow-lg border-primary/20 bg-background/90 backdrop-blur">
+                  <Card className="absolute top-[14%] -right-6 p-3 shadow-lg border-primary/20 bg-background/95 backdrop-blur hidden xl:block">
                     <div className="flex items-center gap-3">
                       <div className="h-8 w-8 rounded-full bg-green-100 flex items-center justify-center text-green-600">
                         <CheckCircle2 className="h-5 w-5" />
@@ -106,7 +118,7 @@ export default function Home() {
                       <div className="text-sm font-medium">Connected to UK</div>
                     </div>
                   </Card>
-                  <Card className="absolute bottom-[20%] left-[5%] p-3 shadow-lg border-primary/20 bg-background/90 backdrop-blur">
+                  <Card className="absolute bottom-[16%] -left-6 p-3 shadow-lg border-primary/20 bg-background/95 backdrop-blur hidden xl:block">
                     <div className="flex items-center gap-3">
                       <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                         <QrCode className="h-5 w-5" />
