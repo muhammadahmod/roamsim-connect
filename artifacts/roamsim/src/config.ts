@@ -12,34 +12,34 @@ export const SUPPORT_HOURS = "Mon–Fri, 8am–8pm SAST · Sat–Sun, 9am–5pm 
 // Edit prices, data, and validity here.
 export const PLANS = [
   { destination: "United Arab Emirates", emoji: "🇦🇪", tagline: "Perfect for Dubai trips", plans: [
-    { name: "UAE Starter", data: "5GB", validity: "7 days", price: "R229" },
-    { name: "UAE Explorer", data: "15GB", validity: "30 days", price: "R499" },
-    { name: "UAE Plus", data: "20GB", validity: "30 days", price: "R799" },
+    { name: "UAE Starter", data: "5GB", validity: "30 days", price: "R189" },
+    { name: "UAE Explorer", data: "10GB", validity: "30 days", price: "R299" },
+    { name: "UAE Plus", data: "20GB", validity: "30 days", price: "R509" },
   ]},
   { destination: "United Kingdom", emoji: "🇬🇧", tagline: "Stay connected in the UK", plans: [
-    { name: "UK Starter", data: "5GB", validity: "7 days", price: "R249" },
-    { name: "UK Explorer", data: "15GB", validity: "30 days", price: "R549" },
+    { name: "UK Starter", data: "5GB", validity: "30 days", price: "R189" },
+    { name: "UK Explorer", data: "20GB", validity: "30 days", price: "R459" },
     { name: "UK Unlimited", data: "Unlimited", validity: "30 days", price: "R899" },
   ]},
   { destination: "United States", emoji: "🇺🇸", tagline: "Coverage across the US", plans: [
-    { name: "US Starter", data: "5GB", validity: "7 days", price: "R279" },
-    { name: "US Explorer", data: "15GB", validity: "30 days", price: "R599" },
+    { name: "US Starter", data: "5GB", validity: "30 days", price: "R199" },
+    { name: "US Explorer", data: "20GB", validity: "30 days", price: "R549" },
     { name: "US Unlimited", data: "Unlimited", validity: "30 days", price: "R999" },
   ]},
   { destination: "Europe (Regional)", emoji: "🇪🇺", tagline: "40+ European countries", plans: [
-    { name: "Europe Starter", data: "5GB", validity: "14 days", price: "R349" },
-    { name: "Europe Explorer", data: "15GB", validity: "30 days", price: "R699" },
-    { name: "Europe Unlimited", data: "Unlimited", validity: "30 days", price: "R1099" },
+    { name: "Europe Starter", data: "5GB", validity: "30 days", price: "R289" },
+    { name: "Europe Explorer", data: "20GB", validity: "30 days", price: "R699" },
+    { name: "Europe Unlimited", data: "Unlimited", validity: "30 days", price: "R1079" },
   ]},
   { destination: "Australia", emoji: "🇦🇺", tagline: "Explore Australia connected", plans: [
-    { name: "Australia Starter", data: "5GB", validity: "14 days", price: "R299" },
-    { name: "Australia Explorer", data: "15GB", validity: "30 days", price: "R599" },
-    { name: "Australia Unlimited", data: "Unlimited", validity: "30 days", price: "R999" },
+    { name: "Australia Starter", data: "5GB", validity: "30 days", price: "R159" },
+    { name: "Australia Explorer", data: "20GB", validity: "30 days", price: "R449" },
+    { name: "Australia Unlimited", data: "Unlimited", validity: "30 days", price: "R989" },
   ]},
   { destination: "Saudi Arabia", emoji: "🇸🇦", tagline: "Ideal for Umrah & Hajj travellers", plans: [
-    { name: "KSA Starter", data: "5GB", validity: "14 days", price: "R259" },
-    { name: "KSA Explorer", data: "15GB", validity: "30 days", price: "R549" },
-    { name: "KSA Plus", data: "20GB", validity: "30 days", price: "R849" },
+    { name: "KSA Starter", data: "5GB", validity: "30 days", price: "R219" },
+    { name: "KSA Explorer", data: "10GB", validity: "30 days", price: "R379" },
+    { name: "KSA Plus", data: "20GB", validity: "30 days", price: "R629" },
   ]},
 ];
 
